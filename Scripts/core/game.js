@@ -1,4 +1,8 @@
 "use strict";
+// File Name: game.js
+// Author: Devesh Kumar (301117993)
+// Page: index.html 
+// File Description: Custom TypeScript File
 let Game = (function () {
     // variable declarations
     let canvas = document.getElementsByTagName('canvas')[0];
@@ -10,6 +14,7 @@ let Game = (function () {
     let startOverButton;
     let dice1;
     let dice2;
+    let diceBackground;
     let assetManifest = [
         { id: "1", src: "./Assets/images/1.png" },
         { id: "2", src: "./Assets/images/2.png" },
@@ -18,7 +23,7 @@ let Game = (function () {
         { id: "5", src: "./Assets/images/5.png" },
         { id: "6", src: "./Assets/images/6.png" },
         { id: "startRolling", src: "./Assets/images/startRolling.png" },
-        { id: "background", src: "./Assets/images/background.png" },
+        { id: "background", src: "./Assets/images/background.jpg" },
         { id: "placeholder", src: "./Assets/images/placeholder.png" },
         { id: "rollButton", src: "./Assets/images/rollButton.png" },
         { id: "startOverButton", src: "./Assets/images/startOverButton.png" }
@@ -46,6 +51,8 @@ let Game = (function () {
     }
     /* This is the main function of the Game (where all the fun happens)*/
     function Main() {
+        diceBackground = new Core.GameObject("background", Config.Game.CENTER_X, Config.Game.CENTER_Y, true);
+        stage.addChild(diceBackground);
         rollButton = new UIObjects.Button("rollButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 100, true);
         stage.addChild(rollButton);
         startOverButton = new UIObjects.Button("startOverButton", Config.Game.CENTER_X, Config.Game.CENTER_Y + 200, true);

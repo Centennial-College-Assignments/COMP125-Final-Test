@@ -1,17 +1,21 @@
-body
-{
-    background-color: lightgray;
-}
-
-#canvas
-{
-    background-color: white;
-    border: 1px dotted black;
-    border-radius: 10px;
-}
-
-#mainContent
-{
-    width: 640px;
-    margin: 0 auto;
-}
+ /* 
+ File Name: game.js
+ Author: Devesh Kumar (301117993)
+ Page: index.html 
+ File Description: Custom CSS File 
+ */
+ 
+ body {
+     background-color: lightgray;
+ }
+ 
+ #canvas {
+     background-color: white;
+     border: 1px dotted black;
+     border-radius: 10px;
+ }
+ 
+ #mainContent {
+     width: 640px;
+     margin: 0 auto;
+ }
