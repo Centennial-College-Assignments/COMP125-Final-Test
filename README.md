@@ -1,3 +1,3 @@
-# COMP125-M2020-Final Test-Template
+# COMP125-M2020-Final Test
 
-## Final Test Template Project for COMP125
+## Dice Roller
