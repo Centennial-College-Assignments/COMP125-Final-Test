@@ -1,9 +1,10 @@
-"use strict";
-// File Name: game.ts
+// File Name: game.js
 // Author: Devesh Kumar (301117993)
 // Page: index.html 
-// File Description: Custom TypeScript File
-let Game = (function () {
+// File Description: Custom JavaScript File
+
+"use strict";
+let Game = (function() {
     // variable declarations
     let canvas = document.getElementsByTagName('canvas')[0];
     let stage;
@@ -28,6 +29,7 @@ let Game = (function () {
         { id: "rollButton", src: "./Assets/images/rollButton.png" },
         { id: "startOverButton", src: "./Assets/images/startOverButton.png" }
     ];
+
     function Preload() {
         assets = new createjs.LoadQueue(); // asset container 
         assets.installPlugin(createjs.Sound); // supports sound preloading
