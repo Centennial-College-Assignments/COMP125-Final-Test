@@ -1,5 +1,5 @@
 "use strict";
-// File Name: game.js
+// File Name: game.ts
 // Author: Devesh Kumar (301117993)
 // Page: index.html 
 // File Description: Custom TypeScript File
@@ -69,14 +69,18 @@ let Game = (function () {
         rollButton.on("click", () => {
             let randomNumber1 = getRandomNumberForDice();
             let randomNumber2 = getRandomNumberForDice();
-            console.log(randomNumber1 + " " + randomNumber2);
+            //to remove previously rolled dices and their respective lables
             stage.removeChild(dice1, diceLabel2, diceLabel1, diceLabel2);
+            //adds the first dice to left of the stage
             dice1 = new Core.GameObject(randomNumber1.toString(), Config.Game.CENTER_X - 200, Config.Game.CENTER_Y - 120, true);
             stage.addChild(dice1);
+            //adds the second dice to right of the stage
             dice2 = new Core.GameObject(randomNumber2.toString(), Config.Game.CENTER_X + 200, Config.Game.CENTER_Y - 120, true);
             stage.addChild(dice2);
+            //adds the label below left dice
             diceLabel1 = new UIObjects.Label(randomNumber1.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X - 200, Config.Game.CENTER_Y, true);
             stage.addChild(diceLabel1);
+            //adds the label below right dice
             diceLabel2 = new UIObjects.Label(randomNumber2.toString(), "40px", "Consolas", "#000000", Config.Game.CENTER_X + 200, Config.Game.CENTER_Y, true);
             stage.addChild(diceLabel2);
         });
